@@ -7,18 +7,28 @@ class App extends Component {
   constructor() {
     super();
     this.handleRemove = this.handleRemove.bind(this);
-
     this.state = {
       name: "React",
       people: []
     };
+  }
 
-    fetch("/api/people").then(response => {
-      return response.json().then(json => {
-        var people = json.results.sort((a, b) => a.name.localeCompare(b.name));
+  componentDidMount() {
+    fetch("https://swapi.co/api/people", {
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      }
+    })
+      .then(response => response.json())
+      .then(json => {
+        console.log("result", json);
+        var people = json.results.sort((a, b) =>
+          a.name.localeCompare(b.name)
+        );
         this.setState({ people });
-      });
-    });
+      }).catch(console.log);
   }
 
   handleRemove(event) {
