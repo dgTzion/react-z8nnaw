@@ -1,0 +1,20 @@
+
+.Person {
+  background-color: #e0dede;
+  margin-bottom: 10px;
+  display: block;
+  width: 90%;
+  text-align: left;
+  padding: 5px;
+  border-radius: 5px;
+  text-shadow: 1px 1px #fffefe;
+}
+
+.Person .remove {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAiElEQVRIie2ROwqAMBAFR8U7eEYR7CwED+AFvJxgZW8tCLGxWEJijFG0yIOFJZ+ZfMCdCpgApdUMNEBygWFNaQDrVYcIxgPSArkYz4DumBvPAPJ6KuQkNnb6MPQfcX2qqwoJe/2JPhcknr23IDhREAVREAU3BavolWev7zcKen3RxWzAACxycAcbwC9ITbeDjwAAAABJRU5ErkJggg==")
+    no-repeat 5% 50%;
+  padding: 10px;
+  padding-left: 30px;
+  cursor: pointer;
+  float: right;
+}
