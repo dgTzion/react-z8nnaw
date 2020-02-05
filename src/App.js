@@ -23,7 +23,6 @@ class App extends Component {
     })
       .then(response => response.json())
       .then(json => {
-        console.log("result", json);
         var people = json.results.sort((a, b) =>
           a.name.localeCompare(b.name)
         );
@@ -35,9 +34,7 @@ class App extends Component {
     event.preventDefault();
     var name = event.target.dataset.name;
     var people = this.state.people;
-    console.log(name);
     people.splice(people.findIndex(e => e.name === name), 1);
-    console.log(people);
     this.setState({ people });
   }
 
